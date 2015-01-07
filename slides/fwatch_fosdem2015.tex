@@ -169,17 +169,27 @@
 \subsection*{} % dummy subsection to display dots
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Mechanical design}
+\begin{frame}{Features}
 
-  \begin{block}{CAD tool selection}
+  \begin{block}{}
     \begin{itemize}
-    \item ...
+    \item Low power MCU
+    \item LCD display (+ backlight)
+    \item micro-USB connector (charging, data transfer)
+    \item Li-ion battery (+ fuel gauge)
+    \item microSD card
+    \item 4 buttons
+    \item GPS module
+    \item Pressure sensor (altitude, barometer)
+    \item Compass
+    \item 3D accelerometer
+    \item Ambient light sensor (backlight adjustment)
+    \item Buzzer
+    \item Vibrating motor
     \end{itemize}
   \end{block}
 
-  \begin{center}
-    \includegraphics[height=1cm]{../pictures/freecad_logo.eps}
-  \end{center}
+  \note[item]{}
 
 \end{frame}
 
@@ -253,10 +263,6 @@
     \includegraphics[height=4.5cm]{../pictures/LCD.eps}
   \end{center}
 
-  \begin{center}
-
-  \end{center}
-
   \note[item]{}
 
 \end{frame}
@@ -276,10 +282,6 @@
     \includegraphics[height=5cm]{../pictures/battery.eps}
   \end{center}
 
-  \begin{center}
-
-  \end{center}
-
   \note[item]{}
 
 \end{frame}
@@ -292,6 +294,7 @@
     \item KiCad
     \item CERN is contributing
     \item Developer next door (help, bugfix, feedback)
+    \item 
     \end{itemize}
   \end{block}
 
@@ -300,6 +303,109 @@
   \end{center}
 
   \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{PCB design}
+
+  \begin{block}{}
+    \begin{itemize}
+    \item KiCad
+    \item CERN is contributing
+    \item Developer next door (help, bugfix, feedback)
+    \end{itemize}
+  \end{block}
+
+  \begin{center}
+    \includegraphics[height=1cm]{../pictures/kicad_logo.eps}
+  \end{center}
+
+  \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{PCB assembly}
+
+  \begin{center}
+    %\includegraphics[height=1cm]{../pictures/kicad_logo.eps}
+  \end{center}
+
+  \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Mechanical design}
+
+  \begin{block}{CAD tool selection}
+    \begin{itemize}
+    \item No mechanical designer in the team
+    \item Evaluate existing free CAD tools (Freecad, ...)
+    \item Docmentation, support
+    \item Leanring curve, user-friendliness
+    \end{itemize}
+  \end{block}
+
+  \begin{itemize}
+  \item Decided to use \textbf{Freecad}
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[height=2cm]{../pictures/freecad_logo.eps}
+  \end{center}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Mechanical design}
+
+  \begin{block}{Challenges}
+    \begin{itemize}
+    \item Learn Freecad
+    \item Buttons
+    \item Water-resistance (dropped for proto)
+    \item Size
+    \item Wrist-strap
+    \item 3D printing (new for us)
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{3D model}
+
+  \begin{center}
+    \includegraphics[height=4.8cm]{../pictures/case-design-model.eps}
+  \end{center}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{First 3D print}
+
+  \begin{itemize}
+  \item Made of platic (powder)
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[height=5cm]{../pictures/case-design-print-v2.eps}
+  \end{center}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Second 3D print}
+
+  \begin{itemize}
+  \item Made of resin (liquid)
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[height=4.1cm]{../pictures/case-design-print-v3.eps}
+  \end{center}
 
 \end{frame}
 
@@ -322,7 +428,7 @@
 \subsection*{} % dummy subsection to display dots
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Mecahnical design}
+\begin{frame}{Mechanical design}
 
   \begin{block}{Wishbone for modularity}
     \begin{itemize}
