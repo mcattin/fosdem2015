@@ -17,6 +17,7 @@
 
 % include packages
 \usepackage{subfigure}
+\usepackage{textcomp}
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{epsfig}
@@ -525,18 +526,22 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{How much does it costs?}
 
+  \begin{block}{Estimated cost for small series (without shipping)}
+
   \begin{table}[h]
     \begin{tabular}{l|r|r|r|l}
       \cline{2-4}
       & \multicolumn{3}{c|}{Number of watches}                                     &  \\ \cline{2-4}
       & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{50} &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Pcb + components}         & 166 EUR                & 87 EUR                  & 73 EUR                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Pcb assembly}             & -                      & 104 EUR                 & 59 EUR                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Case + buttons + screws}  & 67 EUR                 & 65 EUR                  & 60 EUR                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{233 EUR}       & \textbf{256 EUR}        & \textbf{193 EUR}        &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{233 EUR}       & \textbf{2'558 EUR}      & \textbf{9'630 EUR}      &  \\ \cline{1-4}
+      \multicolumn{1}{|l|}{Pcb + components}         & 166 \texteuro                & 87 \texteuro                  & 73 \texteuro                  &  \\ \cline{1-4}
+      \multicolumn{1}{|l|}{Pcb assembly}             & -                      & 104 \texteuro                 & 59 \texteuro                  &  \\ \cline{1-4}
+      \multicolumn{1}{|l|}{Case + buttons + screws}  & 67 \texteuro                 & 65 \texteuro                  & 60 \texteuro                  &  \\ \cline{1-4}
+      \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{233 \texteuro}       & \textbf{256 \texteuro}        & \textbf{193 \texteuro}        &  \\ \cline{1-4}
+      \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{233 \texteuro}       & \textbf{2'558 \texteuro}      & \textbf{9'630 \texteuro}      &  \\ \cline{1-4}
     \end{tabular}
   \end{table}
+
+  \end{block}
 
 
   \note[item]{}
