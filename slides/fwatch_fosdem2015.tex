@@ -214,50 +214,60 @@
 \section{The design}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Component selection}
+\begin{frame}{The design}
 
-  \begin{block}{Criteria}
-    \begin{itemize}
-    \item Low power consumption
-    \item Available from main suppliers
-    \item Small footprint
-    \item ...
-    \end{itemize}
-  \end{block}
+  Components selection criteria
+
+  \begin{itemize}
+  \item Low power consumption
+  \item Available from main suppliers
+  \item Small footprint
+  \end{itemize}
+
+  \note[item]{Fill up slide}
+  \note[item]{Talk about feasability study??}
+  \note[item]{MCU selection -> on a separate slide??}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Components selection}
+
+  \begin{columns}[T] % align columns
+    \begin{column}{.48\textwidth}
+
+      GPS module
+
+      \begin{itemize}
+      \item Antenova
+      \item 13 x 9.5 x 1.8mm
+      \item Integrated antenna
+      \end{itemize}
+
+    \end{column}
+    \hfill%
+    \begin{column}{.48\textwidth}
+      \begin{center}
+        \includegraphics[height=5cm]{M10478-A1.eps}
+      \end{center}
+    \end{column}%
+  \end{columns}
 
   \note[item]{}
 
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{GPS module}
+\begin{frame}{Components selection}
 
-  \begin{block}{M10478-A1}
-    \begin{itemize}
-    \item Antenova
-    \item 13 x 9.5 x 1.8mm
-    \item Integrated antenna
-    \end{itemize}
-  \end{block}
+  Altimeter module (pressure sensor)
 
-  \begin{center}
-    \includegraphics[height=5cm]{M10478-A1.eps}
-  \end{center}
-
-  \note[item]{}
-
-\end{frame}
-
-%------------ FRAME --------------------------------------------------
-\begin{frame}{Altimeter module (pressure sensor)}
-
-  \begin{block}{MS5806-02BA}
-    \begin{itemize}
-    \item Measurement Specialties
-    \item 6.4 x 4 x 2.8mm
-    \item Water resistant
-    \end{itemize}
-  \end{block}
+  \begin{itemize}
+  \item Measurement Specialties
+  \item 6.4 x 4 x 2.8mm
+  \item Water resistant
+  \item Includes a thermometer
+  \end{itemize}
 
   \begin{center}
     \includegraphics[height=4.5cm]{MS5806-02BA52-51.eps}
@@ -268,16 +278,15 @@
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Display}
+\begin{frame}{Components selection}
 
-  \begin{block}{Memory LCD}
-    \begin{itemize}
-    \item Sharp
-    \item 128 x 128 pixels (1.28 inches)
-    \item Ultra low current
-    \end{itemize}
-  \end{block}
+  Memory LCD display
 
+  \begin{itemize}
+  \item Sharp
+  \item 128 x 128 pixels (1.28 inches)
+  \item Ultra low current
+  \end{itemize}
 
   \begin{center}
     \includegraphics[height=4.5cm]{LCD.eps}
@@ -288,15 +297,15 @@
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Battery}
+\begin{frame}{Components selection}
 
-  \begin{block}{}
-    \begin{itemize}
-    \item Adafruit
-    \item Li-ion 500mAh
-    \item Lightweight, big capacity
-    \end{itemize}
-  \end{block}
+  Battery
+
+  \begin{itemize}
+  \item Adafruit
+  \item Li-ion 500mAh
+  \item Lightweight, big capacity
+  \end{itemize}
 
   \begin{center}
     \includegraphics[height=5cm]{battery.eps}
@@ -306,60 +315,61 @@
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{Backlight}
+\begin{frame}{Components selection}
 
-  \begin{block}{A long story...}
-    \begin{enumerate}
-    \item LEDs + opaque plexiglass = fail
-    \item Recycled smartphone backlight = works fine, but can't be sell as a kit
-    \item Custom-made backlight = testing it now, promissing, cheap even in small quantity!
-    \end{enumerate}
-  \end{block}
+  \begin{itemize}
+  \item 3-axis accelerometer + compass
+  \item Ambient light sensor
+  \item SD card slot
+  \item Buzzer
+  \item Vibrating motor
+  \item Battery charger + fuel gauge
+  \item microUSB connector (battery charging, firmware upload, data transfer)
+  \end{itemize}
 
   \begin{center}
-    Backlight pictures here
     %\includegraphics[height=5cm]{battery.eps}
   \end{center}
 
-  \note[item]{}
+  \note{Talk about foreseen improvements?? Bluetooth}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{PCB design}
 
-  \begin{block}{EDA tool choice}
-    \begin{itemize}
-    \item KiCad
-    \item CERN is contributing
-    \item Developer next door (help, bugfix, feedback)
-    \item New features making routing easier
-    \end{itemize}
-  \end{block}
-
-  \begin{block}{Interested in knowing more about KiCad developments?}
-    \begin{itemize}
-    \item Visit the EDA tools dev room tomorrow
-    \end{itemize}
-  \end{block}
+  EDA tool choice
 
   \begin{center}
     \includegraphics[height=1cm]{kicad_logo.eps}
   \end{center}
 
+  \begin{itemize}
+  \item CERN is contributing
+  \item Developer next door (help, bugfix, feedback)
+  \item New features making routing easier (e.g push\&shove)
+  \end{itemize}
+
+  Interested in knowing more about KiCad developments?
+  \begin{itemize}
+  \item Visit the EDA tools dev room tomorrow
+  \end{itemize}
+
   \note[item]{}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{PCB design}
 
-  \begin{block}{Characteristics}
-    \begin{itemize}
-    \item 4 x 4 cm
-    \item 4 layers
-    \item Components on both sides
-    \item Manufactered by Eurocircuits
-    \end{itemize}
-  \end{block}
+  Characteristics
+
+  \begin{itemize}
+  \item 4 x 4 cm
+  \item 4 layers
+  \item Components on both sides
+  \item Manufactered by Eurocircuits
+  \end{itemize}
 
   \begin{center}
     PCB top and bottom pictures here
@@ -367,26 +377,29 @@
     %\includegraphics[height=1cm]{pcb_bot.eps}
   \end{center}
 
-  \note[item]{}
+  \note[item]{there is still free space (without components)}
+  \note[item]{Size could be reduced}
+  \note[item]{Might need additional layers = extra cost}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{PCB validation}
 
-  \begin{block}{First prototype fully working, except two minor bugs}
+  First prototype fully working, except two minor bugs
+
+  \begin{itemize}
+  \item Error in a footprint
     \begin{itemize}
-    \item Error in a footprint
-      \begin{itemize}
-      \item Voltage regulator output wrongly set
-      \end{itemize}
-    \item MCU interrupt scheme
-      \begin{itemize}
-      \item No all MCU pins can be used as interrupt source
-      \item Polling is draining the baterry quickly
-      \end{itemize}
-    \item Fixed with few cuts and wires!
+    \item Voltage regulator output wrongly set
     \end{itemize}
-  \end{block}
+  \item MCU interrupt scheme
+    \begin{itemize}
+    \item No all MCU pins can be used as interrupt source
+    \item Polling is draining the baterry quickly
+    \end{itemize}
+    \item Fixed with few cuts and wires!
+  \end{itemize}
 
   \begin{center}
     mounted pcb pictures here
@@ -394,19 +407,83 @@
   \end{center}
 
   \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Backlight}
+
+  A long story...
+
+  \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Backlight}
+
+  First try: LEDs + opaque plexiglass
+
+  \begin{center}
+    Backlight pictures here (on and off)
+    %\includegraphics[height=5cm]{battery.eps}
+  \end{center}
+
+  \textbf{FAIL!}
+
+  \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Backlight}
+
+  Second try: Recycled smartphone backlight
+
+  \begin{center}
+    Backlight pictures here
+    %\includegraphics[height=5cm]{battery.eps}
+  \end{center}
+
+  \textbf{Better, but...}
+
+  \note[item]{Explain that it is not suitable for series production}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Backlight}
+
+  Current try: Custom-made module
+
+  \begin{center}
+    Backlight pictures here (on and off)
+    %\includegraphics[height=5cm]{battery.eps}
+  \end{center}
+
+  \note[item]{contacted many company, found one with no MOQ of millions}
+  \note[item]{got first samples}
+  \note[item]{cheap even for small quantity}
+  \note[item]{negative point, a bit thick compared to high-tech smartphones}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Mechanical design}
 
-  \begin{block}{CAD tool selection}
-    \begin{itemize}
-    \item No mechanical designer in the team
-    \item Evaluate existing free CAD tools (Freecad, ...)
-    \item Docmentation, support
-    \item Leanring curve, user-friendliness
-    \end{itemize}
-  \end{block}
+  CAD tool selection
+
+  \begin{itemize}
+  \item No mechanical designer in the team
+  \item Evaluate existing free CAD tools (Freecad, ...)
+  \end{itemize}
+
+  Criteria
+
+  \begin{itemize}
+  \item Docmentation, support
+  \item Leanring curve, user-friendliness
+  \end{itemize}
 
   \begin{itemize}
   \item Decided to use \textbf{Freecad}
@@ -415,30 +492,54 @@
   \begin{center}
     \includegraphics[height=2cm]{freecad_logo.eps}
   \end{center}
+
   \note{Mechanical design}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Mechanical design}
 
-  \begin{block}{Challenges}
-    \begin{itemize}
-    \item Learn Freecad
-    \item Buttons
-    \item Water-resistance (dropped for proto)
-    \item Size
-    \item Wrist-strap
-    \item 3D printing (new for us)
-    \end{itemize}
-  \end{block}
+  Full of new challenges
 
-  \note[item]{Learn Freecad = show the making of video}
-  \note[item]{Button = show detailed cut-view of button and explain quickly}
-  \note[item]{Water-resistance = show, explain grove and rubber join idea}
-  \note[item]{Size = keep it reasonably small to be wearable on the wrist}
-  \note[item]{Wrist-strap = easy to get "nato" type wrist-strap, bought online}
-  \note[item]{3D printing = didn't knew the domain, studied the main 3d printing services, }
+  \begin{itemize}
+  \item Using a CAD tool, learning Freecad
+  \item 3D printing
+  \end{itemize}
+
+  It's time for a (hopefully working) live demo!
+
+  \note[item]{Learn Freecad = no mech engineer in the team, lots of online tutorials}
+  \note[item]{3D printing = didn't knew the domain, studied the main 3d printing services}
+  \note[item]{3D printing = every order was exiting, to see the result}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Mechanical design}
+
+  The buttons
+
+  \begin{center}
+    cut-view of button here (+maybe some hand drawing of our ideas?)
+    %\includegraphics[height=2cm]{freecad_logo.eps}
+  \end{center}
+
   \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Mechanical design}
+
+  \begin{itemize}
+  \item Water-resistance (dropped for proto)
+  \item Wrist-strap
+  \end{itemize}
+
+  \note[item]{Water-resistance = show, explain grove and rubber join idea}
+  \note[item]{Wrist-strap = easy to get "nato" type wrist-strap, bought online}
+  \note[item]{Might remove this slide?}
 
 \end{frame}
 
@@ -455,26 +556,31 @@
 \begin{frame}{First 3D print}
 
   \begin{itemize}
-  \item Platic material (powder-based)
+  \item Platic material
   \end{itemize}
 
   \begin{center}
     \includegraphics[height=5cm]{case-design-print-v2.eps}
   \end{center}
+
   \note{3D Model}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Second 3D print}
 
   \begin{itemize}
-  \item Resin material (liquid-based)
+  \item Resin material
   \end{itemize}
 
   \begin{center}
     \includegraphics[height=4.1cm]{case-design-print-v3.eps}
   \end{center}
-  \note{3D Model}
+
+  \note{Supposed to be water-tight}
+  \note{Smoother finnish than raw plasic}
+
 \end{frame}
 
 
@@ -491,6 +597,9 @@
     %\includegraphics[height=4.1cm]{case-design-print-v4.eps}
   \end{center}
 
+  \note{Talk about improvements to be done?? Water-resistance}
+  \note{}
+
 \end{frame}
 
 
@@ -504,14 +613,18 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
-  \begin{block}{Components procurement}
-    \begin{itemize}
-    \item Buy electronics components
-    \item Download PCB gerber file and order circuit
-    \item Download 3D model and order from a 3D service
-    \item Buy or build a programmer
-    \end{itemize}
-  \end{block}
+  Components procurement \& tools
+
+  \begin{itemize}
+  \item Buy electronics components
+  \item Download PCB gerber file and order circuit
+  \item Download case model and order 3D print
+  \item Buy (or build) a programmer (to flash the booloader)
+  \item Soldering paste
+  \item Hot-air station or oven
+  \item Soldering iron (re-work)
+  \item Optional: Milling maching (plexiglass)
+  \end{itemize}
 
   \note[item]{I want to build this watch, what should I do?}
 
@@ -520,50 +633,42 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
-  \begin{block}{Tools and techniques}
-    \begin{itemize}
-    \item Soldering QFN/BGA (stencil, paste)
-    \item Hot-air station or oven
-    \item Programmer to flash the booloader
-    \item Optional: Milling maching (plexiglass)
-    \end{itemize}
-  \end{block}
+  PCB assembly
 
-  \note[item]{Or split in separte frames with a nice picture for each point??}
-\end{frame}
-
-%------------ FRAME --------------------------------------------------
-\begin{frame}{Building the watch}
-
-  \begin{block}{PCB assembly}
-    \begin{itemize}
-    \item Stencils (ordered with PCB)
-    \item Leaded soldering paste (easier to handle than lead-free)
-    \item Components placed by hand (script to generate placement pdf)
-    \item Soldered with hot-air station (quite tricky!)
-    \end{itemize}
-  \end{block}
+  \begin{itemize}
+  \item Stencils (can be ordered with PCB)
+  \item Leaded soldering paste (easier to handle than lead-free)
+  \item Components placed by hand (script to generate placement pdf)
+  \item Soldered with hot-air station (quite tricky!)
+  \end{itemize}
 
   \begin{center}
+    pictures of the assembled pcb here
     %\includegraphics[height=1cm]{pcb_assembly.eps}
     %\includegraphics[height=1cm]{placement_pdf.eps}
   \end{center}
 
-  \note[item]{}
+  \note[item]{How we assembled the PCB}
+  \note{Stencil needed to solder BGA/QFN components (pins are underneath and not accesible with a soldering iron)}
+
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
-  \begin{block}{Software}
-    \begin{itemize}
-    \item Download sources from the GIT repo
-    \item Find your way through the sources (not nicely bundled, yet)
-    \item Compile booloader and flash it (using a programmer)
-    \item Compile application software and flash it (using the bootloader)
-    \item Modify, re-flash, etc...
-    \end{itemize}
-  \end{block}
+  Software
+
+  \begin{itemize}
+  \item Download sources from the GIT repo
+  \item Find your way through the sources (not nicely bundled, yet)
+  \item Compile booloader and flash it (using a programmer)
+  \item Compile application software and flash it (using the bootloader)
+  \item Modify, re-flash, etc...
+  \end{itemize}
+
+  \begin{center}
+    \textbf{git://ohwr.org/f-watch.git}
+  \end{center}
 
   \note[item]{}
 
@@ -572,27 +677,29 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{How much does it costs?}
 
-  \begin{block}{Estimated cost for small series (without shipping)}
-
-  \begin{table}[h]
-    \begin{tabular}{l|r|r|r|l}
-      \cline{2-4}
-      & \multicolumn{3}{c|}{Number of watches}                                     &  \\ \cline{2-4}
-      & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{50} &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Pcb + components}         & 166 \texteuro                & 87 \texteuro                  & 73 \texteuro                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Pcb assembly}             & -                      & 104 \texteuro                 & 59 \texteuro                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{Case + buttons + screws}  & 67 \texteuro                 & 65 \texteuro                  & 60 \texteuro                  &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{233 \texteuro}       & \textbf{256 \texteuro}        & \textbf{193 \texteuro}        &  \\ \cline{1-4}
-      \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{233 \texteuro}       & \textbf{2'558 \texteuro}      & \textbf{9'630 \texteuro}      &  \\ \cline{1-4}
-    \end{tabular}
-  \end{table}
-
-  \end{block}
-
+  \begin{center}
+    \begin{table}[h]
+      \begin{tabular}{l|r|r|r|l}
+        \cline{2-4}
+        & \multicolumn{3}{c|}{Number of watches}                                     &  \\ \cline{2-4}
+        & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{50} &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Pcb + components}         & 166 \texteuro                & 87 \texteuro                  & 73 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Pcb assembly}             & -                      & 104 \texteuro                 & 59 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Case + buttons + screws}  & 67 \texteuro                 & 65 \texteuro                  & 60 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{233 \texteuro}       & \textbf{256 \texteuro}        & \textbf{193 \texteuro}        &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{233 \texteuro}       & \textbf{2'558 \texteuro}      & \textbf{9'630 \texteuro}      &  \\ \cline{1-4}
+      \end{tabular}
+      \caption{Estimated cost for small series (without shipping)}
+    \end{table}
+  \end{center}
 
   \note[item]{}
+
 \end{frame}
 
+
+
+\begin{comment}
 
 %#####################################################################
 %############ SECTION ################################################
@@ -660,6 +767,10 @@
   \note[item]{}
 
 \end{frame}
+
+\end{comment}
+
+
 
 %#####################################################################
 %############ SECTION ################################################
