@@ -107,7 +107,7 @@
 
 %\beamerdefaultoverlayspecification{<+->}
 
-\setstretch{1.5}
+%\setstretch{1.5}
 
 \begin{document}
 
@@ -494,6 +494,22 @@
 \end{frame}
 
 
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Third 3D print}
+
+  \begin{itemize}
+  \item Resin material
+  \item Improved case parts fastening
+  \end{itemize}
+
+  \begin{center}
+    Picture of the new fastening method + transparent 3d view
+    %\includegraphics[height=4.1cm]{case-design-print-v4.eps}
+  \end{center}
+
+\end{frame}
+
+
 
 %#####################################################################
 %############ SECTION ################################################
@@ -502,42 +518,41 @@
 \subsection*{} % dummy subsection to display dots
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{I want to build this watch, what should I do?}
+\begin{frame}{Building the watch}
 
   \begin{block}{Components procurement}
     \begin{itemize}
     \item Buy electronics components
     \item Download PCB gerber file and order circuit
     \item Download 3D model and order from a 3D service
+    \item Buy or build a programmer
     \end{itemize}
   \end{block}
+
+  \note[item]{I want to build this watch, what should I do?}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Building the watch}
 
   \begin{block}{Tools and techniques}
     \begin{itemize}
     \item Soldering QFN/BGA (stencil, paste)
     \item Hot-air station or oven
-    \item Milling maching (optionnal for plexiglass)
     \item Programmer to flash the booloader
+    \item Optional: Milling maching (plexiglass)
     \end{itemize}
   \end{block}
 
-  \begin{block}{Software}
-    \begin{itemize}
-    \item Download sources
-    \item Find your way in the sources (not nicely bundled, yet)
-    \item Compile booloader and flash (using a programmer)
-    \item Compile application software and flash (using the bootloader)
-    \end{itemize}
-  \end{block}
-
-  \note[item]{}
+  \note[item]{Or split in separte frames with a nice picture for each point??}
 
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{PCB assembly}
+\begin{frame}{Building the watch}
 
-  \begin{block}{}
+  \begin{block}{PCB assembly}
     \begin{itemize}
     \item Stencils (ordered with PCB)
     \item Leaded soldering paste (easier to handle than lead-free)
@@ -550,6 +565,23 @@
     %\includegraphics[height=1cm]{pcb_assembly.eps}
     %\includegraphics[height=1cm]{placement_pdf.eps}
   \end{center}
+
+  \note[item]{}
+
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Building the watch}
+
+  \begin{block}{Software}
+    \begin{itemize}
+    \item Download sources from the GIT repo
+    \item Find your way through the sources (not nicely bundled, yet)
+    \item Compile booloader and flash it (using a programmer)
+    \item Compile application software and flash it (using the bootloader)
+    \item Modify, re-flash, etc...
+    \end{itemize}
+  \end{block}
 
   \note[item]{}
 
@@ -583,25 +615,6 @@
 
 %#####################################################################
 %############ SECTION ################################################
-\section{Softwarexs}
-
-\subsection*{} % dummy subsection to display dots
-
-
-%------------ FRAME --------------------------------------------------
-\begin{frame}{Software (firmware, host software)}
-
-  \begin{center}
-    %\includegraphics[height=7cm]{spec_v4.eps}
-  \end{center}
-
-  \note[item]{}
-
-\end{frame}
-
-
-%#####################################################################
-%############ SECTION ################################################
 \section{What's next?}
 
 \subsection*{} % dummy subsection to display dots
@@ -625,6 +638,12 @@
     \item Data transfer (to/from SD card)
     \item Emulator
     \item Application "ecosystem"
+      \begin{itemize}
+      \item GPS route following
+      \item Atmosheric pressure history
+      \item Altitude based on atmospheric pressure
+      \item ...
+      \end{itemize}
     \end{itemize}
   \end{block}
 
