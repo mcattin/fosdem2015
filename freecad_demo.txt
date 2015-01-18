@@ -1,0 +1,40 @@
+------------------------------------------------------------
+To do before:
+
+* Login Sculpteo
+* Load and delete a design (to have the path right)
+* Open Freecad
+* Save a design (to have the path right)
+
+------------------------------------------------------------
+Time estimate: ~5min
+
+1) Part design
+
+2) Part Design -> Involute gear
+
+3) Number of teeth: 13
+   Modules        : 5mm
+   Pressure angle : 20
+
+4) Pad: 5mm
+
+5) Create sketch: circle 18mm (centered)
+
+6) Map sketch to gear's top face
+
+7) Packet: 3mm
+
+8) Create sketch: two circles 5mm (shifted by 6.5mm)
+
+9) Map sketch to face
+
+10) Pad 2mm
+
+11) Select all
+
+12) Export demo_fosdem2015.stl
+
+13) On sculpteo website: upload a new design
+
+14) Change color, review
