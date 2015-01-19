@@ -333,7 +333,7 @@
     \end{column}%
   \end{columns}
 
-  \note[item]{}
+  \note[item]{Replace by hello world picture??}
 
 \end{frame}
 
@@ -365,14 +365,21 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Components selection}
 
+  Other features
   \begin{itemize}
   \item 3-axis accelerometer + compass
   \item Ambient light sensor
-  \item SDcard slot
+  \item microSD card slot
   \item Battery charger + fuel gauge
   \item micro-USB connector
   \item Buzzer
   \item Vibrating motor
+  \end{itemize}
+
+  \vskip 5mm
+  Foreseen improvements
+  \begin{itemize}
+  \item Bluetooth LE
   \end{itemize}
 
   \begin{center}
@@ -395,7 +402,7 @@
 
   \begin{itemize}
   \item CERN is contributing
-  \item Developer next door (help, bugfix, feedback)
+  \item Developer in the team (help, bugfix, feedback)
   \item New features making routing easier (e.g push\&shove)
   \end{itemize}
 
@@ -405,7 +412,16 @@
   \item Visit the EDA tools dev room tomorrow
   \end{itemize}
 
-  \note[item]{}
+  \note[item]{make advert. for contribution??}
+  \note[item]{To design the pcb, we choose kicad}
+  \note[item]{The choice was pretty straight forward, as cern is contributing to the project}
+  \note[item]{The reason is to improve open source design sharing}
+  \note[item]{The goal is to make it comparable of the mid-end commercial tools}
+  \note[item]{Also we had a kicad developer in the team}
+  \note[item]{This was very useful to get quick help and bugfixes}
+  \note[item]{On the other hand, the watch project allowed to systematically list all the points to be improved}
+  \note[item]{An important feature that made the routing much easier was the push\&shove function}
+  \note[item]{If you want to know more about kicad, it's feature and the future plans I invite you to visit the EDA dev room tomorrow}
 
 \end{frame}
 
@@ -444,15 +460,16 @@
     \end{itemize}
   \item MCU interrupt scheme
     \begin{itemize}
-    \item No all MCU pins can be used as interrupt source
-    \item Polling is draining the baterry quickly
+    \item Not all MCU pins as IRQ source
+    \item Polling drains the battery quickly
     \end{itemize}
     \item Fixed with few cuts and wires!
   \end{itemize}
 
   \begin{center}
-    mounted pcb pictures here
-    %\includegraphics[height=1cm]{pcb_assembly.eps}
+    \includegraphics[height=3cm]{pcb_mounted_bottom.eps}~
+    %\includegraphics[height=3cm]{pcb_mounted_top.eps}
+    picture of mounted pcb top here
   \end{center}
 
   \note[item]{}
@@ -464,7 +481,10 @@
 
   A long story...
 
-  \note[item]{}
+  \note[item]{Another challenge was the backlight of the LCD display}
+  \note[item]{The LCD is perfectly readable during day, even under sunlight}
+  \note[item]{But not in the dark or during the night}
+  \note[item]{This i why we need a backlight}
 
 \end{frame}
 
@@ -475,12 +495,15 @@
 
   \begin{center}
     \includegraphics[height=4.5cm]{bl_led_off.eps}~
+    \pause
     \includegraphics[height=4.5cm]{bl_led_on.eps}
   \end{center}
 
   \textbf{FAIL!}
 
-  \note[item]{}
+  \note[item]{We first though of putting a few LED on the top of the PCB}
+  \note[item]{And a opaque piece of plexiglass (~1mm) to difuse the light}
+  \note[item]{But as you can see on the picture, the light distribution is not uniform}
 
 \end{frame}
 
@@ -491,12 +514,15 @@
 
   \begin{center}
     \includegraphics[height=4.5cm]{bl_smartphone_off.eps}~
+    \pause
     \includegraphics[height=4.5cm]{bl_smartphone_on.eps}
   \end{center}
 
   \textbf{Better, but...}
 
-  \note[item]{Explain that it is not suitable for series production}
+  \note[item]{Then we took the backlight of a broken smartphone screen and cut it to the right dimensions}
+  \note[item]{As you can see, it work nicely, but...}
+  \note[item]{It is not very suitable for production in serie or to sell in a kit}
 
 \end{frame}
 
@@ -507,15 +533,17 @@
 
   \begin{center}
     \includegraphics[height=4.5cm]{bl_custom_off.eps}~
+    \pause
     \includegraphics[height=4.5cm]{bl_custom_on.eps}
   \end{center}
 
   \textbf{The solution}
 
-  \note[item]{contacted many company, found one with no MOQ of thousands}
-  \note[item]{got first samples}
-  \note[item]{cheap even for small quantity}
-  \note[item]{negative point, a bit thick compared to high-tech smartphones}
+  \note[item]{We finally contacted many companies}
+  \note[item]{And we found one with no Minium Order Quantity of several thousands}
+  \note[item]{You see here the first samples}
+  \note[item]{There are surprisingly cheap, even for small quantity and have a good luminosity}
+  \note[item]{(negative point, a bit thick compared to high-tech smartphones)}
 
 \end{frame}
 
@@ -525,17 +553,21 @@
   CAD tool selection
 
   \begin{itemize}
-  \item No mechanical designer in the team
-  \item Evaluate existing free CAD tools (Freecad, ...)
+  \item No mechanical engineer
+  \item No experience in 3d design
+  \item Evaluate existing free CAD tools \\
+    Freecad, OpenSCAD, Open CASCADE, ...
   \end{itemize}
 
+  \pause
   Criteria
 
   \begin{itemize}
   \item Docmentation, support
-  \item Leanring curve, user-friendliness
+  \item User-friendliness, leanring curve
   \end{itemize}
 
+  \pause
   \begin{itemize}
   \item Decided to use \textbf{Freecad}
   \end{itemize}
@@ -544,7 +576,7 @@
     \includegraphics[height=2cm]{freecad_logo.eps}
   \end{center}
 
-  \note{Mechanical design}
+  \note{}
 
 \end{frame}
 
@@ -554,33 +586,24 @@
   Full of new challenges
 
   \begin{itemize}
-  \item Learning and using Freecad
+  \item Learning Freecad from scratch
+  \item Design a watch case
   \item 3D printing
   \end{itemize}
 
+  \pause
   \vskip 6mm
   It's time for a (hopefully working) live demo!
 
-  \note[item]{Learn Freecad = no mech engineer in the team, lots of online tutorials}
+  \note[item]{Learn Freecad from scratch = no mech engineer in the team, lots of online tutorials}
   \note[item]{3D printing = didn't knew the domain, studied the main 3d printing services}
   \note[item]{3D printing = every order was exiting, to see the result}
   \note[item]{OR live demo at the end of mechanics section??}
 
 \end{frame}
 
-%------------ FRAME --------------------------------------------------
-\begin{frame}{Mechanical design}
 
-  The buttons
-
-  \begin{center}
-    \includegraphics[height=4.5cm]{button_cross-section.eps}~
-    \includegraphics[height=4.5cm]{button_circlip.eps}
-  \end{center}
-
-  \note[item]{cross section of button here (+maybe some hand drawing of our ideas?)}
-
-\end{frame}
+\begin{comment}
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Mechanical design}
@@ -596,6 +619,9 @@
 
 \end{frame}
 
+\end{comment}
+
+
 %------------ FRAME --------------------------------------------------
 \begin{frame}{3D model}
 
@@ -603,7 +629,7 @@
     \includegraphics[height=4.8cm]{case-design-model.eps}
   \end{center}
 
-  Making of movie
+  Making of movie (6 hours in 5 minutes)
   \url{http://www.ohwr.org/projects/f-watch/wiki/Movies}
 
   \note{3D model}
@@ -641,7 +667,6 @@
 
 \end{frame}
 
-
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Third 3D print}
 
@@ -661,6 +686,25 @@
 
 \end{frame}
 
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Mechanical design}
+
+  The buttons
+
+  \begin{center}
+    \includegraphics[height=4.5cm]{button_cross-section.eps}~
+    \includegraphics[height=4.5cm]{button_circlip.eps}
+  \end{center}
+
+  \note[item]{maybe some hand drawing of our ideas?}
+  \note[item]{Another challenge was the buttons}
+  \note[item]{First we though of using small springs, but to complexe in the end.}
+  \note[item]{Then using rivets, tricky to manufacture.}
+  \note[item]{Final choice, 3d printed buttons.}
+  \note[item]{With a switch that needs a big force to press, the button is going back in place.}
+
+\end{frame}
+
 
 
 %#####################################################################
@@ -676,14 +720,18 @@
 
   \begin{itemize}
   \item Buy electronics components
-  \item Download PCB gerber file and order circuit
+  \item Download circuit gerber files and order PCB
   \item Download case model and order 3D print
-  \item Buy (or build) a programmer (to flash the booloader)
+  \item Buy/build a programmer (booloader)
   \item Soldering paste
   \item Hot-air station or oven
-  \item Soldering iron (re-work)
+  \item Soldering iron (finish/re-work)
   \item Optional: Milling maching (plexiglass)
   \end{itemize}
+
+  \begin{center}
+    \includegraphics[height=2cm]{plexiglass.eps}
+  \end{center}
 
   \note[item]{I want to build this watch, what should I do?}
 
@@ -697,14 +745,15 @@
   \begin{itemize}
   \item Stencils (can be ordered with PCB)
   \item Leaded soldering paste (easier to handle than lead-free)
-  \item Components placed by hand (script to generate placement pdf)
+  \item Components placed by hand
+  \item Script to generate placement pdf
   \item Soldered with hot-air station (quite tricky!)
   \end{itemize}
 
   \begin{center}
-    pictures of the assembled pcb here
-    %\includegraphics[height=1cm]{pcb_assembly.eps}
-    %\includegraphics[height=1cm]{placement_pdf.eps}
+    \includegraphics[height=2.5cm]{pcb_stencil_paste.eps}~
+    \includegraphics[height=2.5cm]{pcb_assembly_diagram.eps}~
+    \includegraphics[height=2.5cm]{pcb_component_placement.eps}
   \end{center}
 
   \note[item]{How we assembled the PCB}
@@ -721,12 +770,14 @@
   \item Download sources from the GIT repo
   \item Find your way through the sources (not nicely bundled, yet)
   \item Compile booloader and flash it (using a programmer)
-  \item Compile application software and flash it (using the bootloader)
+  \item Compile application sw and flash it (using the bootloader)
   \item Modify, re-flash, etc...
   \end{itemize}
 
+  \vskip 8mm
+
   \begin{center}
-    \textbf{git://ohwr.org/f-watch.git}
+    \url{git://ohwr.org/f-watch.git}
   \end{center}
 
   \note[item]{}
