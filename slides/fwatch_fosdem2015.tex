@@ -221,13 +221,21 @@
 
   \begin{itemize}
   \item Low power consumption
-  \item Available from main suppliers
-  \item Small footprint
+    \vskip 5mm
+  \item Available in small quantity from main suppliers
+    \vskip 5mm
+  \item Small size (footprint)
   \end{itemize}
 
   \note[item]{Fill up slide}
   \note[item]{Talk about feasability study??}
-  \note[item]{MCU selection -> on a separate slide??}
+
+  \note[item]{After this introduction, I'll talk more about design process}
+  \note[item]{We started with the component selection}
+  \note[item]{All components must be low power, to have the longest possible battery life}
+  \note[item]{They should be available from main suppliers in small quantity}
+  \note[item]{\rightarrow to allow others to build the watch}
+  \note[item]{Also the components must be as small as possible to fit in a watch}
 
 \end{frame}
 
@@ -255,7 +263,14 @@
     \end{column}%
   \end{columns}
 
-  \note[item]{}
+  \note[item]{More detail about the MUC selection??}
+
+  \note[item]{The micro controller we chose is a 32-bit cortex-M3 from Silicon Labs}
+  \note[item]{It has a lot of memory}
+  \note[item]{And an extremly low power consumption}
+  \note[item]{In deep sleep mode it only consumes a few micro amperes}
+  \note[item]{In deep sleep, the RTC is running and RAM is kept}
+
 
 \end{frame}
 
@@ -280,7 +295,10 @@
     \end{column}%
   \end{columns}
 
-  \note[item]{}
+  \note[item]{The main component of a GPS watch is of course the GPS module}
+  \note[item]{We chose a module with integrated antenna from Antenova, to simplify the design and reduce the risk}
+  \note[item]{Because designing a specific on-board antenna can be tricky}
+  \note[item]{And we are not RF experts}
 
 \end{frame}
 
@@ -296,7 +314,7 @@
       \begin{itemize}
       \item Measurement Specialties
       \item 6.4 x 4 x 2.8mm
-      \item Water resistant
+      \item Water-resistant
       \item Includes a thermometer
       \end{itemize}
 
@@ -307,7 +325,15 @@
     \end{column}%
   \end{columns}
 
-  \note[item]{}
+  \note[item]{Another important component is the pressure sensor}
+  \note[item]{Because we wanted this watch to be a hiking and montaineering watch}
+  \note[item]{So we needed a good pressure sensor to calculate the altitude precisely}
+  \note[item]{Because the GPS is quite inacurate for the altitude}
+  \note[item]{And also the pressure sensor can gbe used to give a basic weather forecast}
+  \note[item]{We chose a very good pressure sensor}
+  \note[item]{It is water-resistant, it's important because it has to be exposed to the outdie of the case}
+  \note[item]{And it includes a thermometer}
+  \note[item]{Of course, the temperature is not very accurate when you have the watch on you wrist}
 
 \end{frame}
 
@@ -329,11 +355,17 @@
     \end{column}
     \hfill%
     \begin{column}{.48\textwidth}
-      \includegraphics[height=4.5cm]{LCD.eps}
+      %\includegraphics[height=4.5cm]{LCD.eps}
+      \includegraphics[height=4.5cm]{sw_hello_world.eps}
     \end{column}%
   \end{columns}
 
   \note[item]{Replace by hello world picture??}
+  \note[item]{For the display, we chose a memory LCD from Sharp}
+  \note[item]{It's 128 by 128 pixel, for 1.28 inches (~3cm)}
+  \note[item]{This LCD requires a very low current to keep the image, because it has a memory in each pixel}
+  \note[item]{It is readable in sunlight}
+  \note[item]{A backlight is useful only to read it in the dark, we'll come to this later}
 
 \end{frame}
 
@@ -348,7 +380,9 @@
       \begin{itemize}
       \item Adafruit
       \item Li-ion 500mAh
-      \item Lightweight, big capacity
+      \item Big capacity
+      \item Lightweight
+      \item Rechargeable
       \end{itemize}
 
     \end{column}
@@ -358,7 +392,10 @@
     \end{column}%
   \end{columns}
 
-  \note{battery}
+  \note[item]{The battery we chose is a 500mAh Lithium ion bought via Adafruit}
+  \note[item]{It has a big capacity, because the GPS module consumes quite a lot}
+  \note[item]{It is very light}
+  \note[item]{And it is of course rechargeable}
 
 \end{frame}
 
@@ -380,14 +417,17 @@
   Foreseen improvements
   \begin{itemize}
   \item Bluetooth LE
+  \item Low noise amplifier for the GPS antenna
   \end{itemize}
 
   \begin{center}
     %\includegraphics[height=5cm]{battery.eps}
   \end{center}
 
-  \note{Talk about foreseen improvements?? Bluetooth}
-  \note{USB is used for battery charging, firmware upload, data transfer}
+  \note{Talk about foreseen improvements??}
+  \note[item]{microSD card to store for example GPS tracks}
+  \note[item]{USB is used for battery charging, firmware upload, data transfer}
+  \note[item]{It also includes a buzzer and a vibrating motor to notify the user}
 
 \end{frame}
 
@@ -413,14 +453,15 @@
   \end{itemize}
 
   \note[item]{make advert. for contribution??}
-  \note[item]{To design the pcb, we choose kicad}
+  \note[item]{I will now talk about the PCB design}
+  \note[item]{To design the pcb, we chose kicad}
   \note[item]{The choice was pretty straight forward, as cern is contributing to the project}
-  \note[item]{The reason is to improve open source design sharing}
-  \note[item]{The goal is to make it comparable of the mid-end commercial tools}
+  \note[item]{The reason cern is contributing is to improve open source design sharing}
+  \note[item]{The goal is to make it comparable to the mid-end commercial tools}
   \note[item]{Also we had a kicad developer in the team}
   \note[item]{This was very useful to get quick help and bugfixes}
   \note[item]{On the other hand, the watch project allowed to systematically list all the points to be improved}
-  \note[item]{An important feature that made the routing much easier was the push\&shove function}
+  \note[item]{When we started the pcb design, kicad just included the push\&shove function, it really made the routing easier}
   \note[item]{If you want to know more about kicad, it's feature and the future plans I invite you to visit the EDA dev room tomorrow}
 
 \end{frame}
@@ -442,6 +483,11 @@
     \includegraphics[height=4cm]{pcb_bottom.eps}
   \end{center}
 
+  \note[item]{The goal was to fix every thing in a 4 by 4 cm board}
+  \note[item]{There is two thing in opposition here}
+  \note[item]{On one side the GPS reception is better with a big board}
+  \note[item]{On the other side, it should fix in a watch}
+  \note[item]{}
   \note[item]{there is still free space (without components)}
   \note[item]{Size could be reduced}
   \note[item]{Might need additional layers = extra cost}
@@ -454,7 +500,7 @@
   First prototype fully working, except two minor bugs
 
   \begin{itemize}
-  \item Error in a footprint
+  \item Error in a datasheet
     \begin{itemize}
     \item Voltage regulator output wrongly set
     \end{itemize}
@@ -468,11 +514,15 @@
 
   \begin{center}
     \includegraphics[height=3cm]{pcb_mounted_bottom.eps}~
-    %\includegraphics[height=3cm]{pcb_mounted_top.eps}
-    picture of mounted pcb top here
+    \includegraphics[height=3cm]{pcb_mounted_top.eps}
   \end{center}
 
-  \note[item]{}
+  \note[item]{After routing the pcb, we order a few board that we assembled by hand}
+  \note[item]{There were only one error that preveted the circuit to work properly}
+  \note[item]{The voltage regulator setting pins was badly connected}
+  \note[item]{This was due to a error in the datasheet it was easily fixed by cutting a trace and soldering a little wire}
+  \note[item]{Also, we didn't carefully check how the interrupt work with this MCU and in order to use interrupt from the battery gauge and accelerometer, we had to solder a few exra wires}
+  \note[item]{Because without interrupt we had to poll to check if the charger was plugged and it was draining the battery quicky.}
 
 \end{frame}
 
@@ -482,9 +532,9 @@
   A long story...
 
   \note[item]{Another challenge was the backlight of the LCD display}
-  \note[item]{The LCD is perfectly readable during day, even under sunlight}
+  \note[item]{As aI said, the LCD is perfectly readable during day, even under sunlight}
   \note[item]{But not in the dark or during the night}
-  \note[item]{This i why we need a backlight}
+  \note[item]{This is why we need a backlight}
 
 \end{frame}
 
@@ -593,7 +643,7 @@
 
   \pause
   \vskip 6mm
-  It's time for a (hopefully working) live demo!
+  It's time for a live demo!
 
   \note[item]{Learn Freecad from scratch = no mech engineer in the team, lots of online tutorials}
   \note[item]{3D printing = didn't knew the domain, studied the main 3d printing services}
@@ -632,7 +682,7 @@
   Making of movie (6 hours in 5 minutes)
   \url{http://www.ohwr.org/projects/f-watch/wiki/Movies}
 
-  \note{3D model}
+  \note[item]{}
 
 \end{frame}
 
@@ -647,7 +697,8 @@
     \includegraphics[height=5cm]{case-design-print-v2.eps}
   \end{center}
 
-  \note{3D Model}
+  \note[item]{Rough when not polished}
+  \note[item]{Not water-tight}
 
 \end{frame}
 
@@ -662,7 +713,7 @@
     \includegraphics[height=4.1cm]{case-design-print-v3.eps}
   \end{center}
 
-  \note{Supposed to be water-tight}
+  \note{Supposed to be water-tight, not tested though}
   \note{Smoother finnish than raw plasic}
 
 \end{frame}
@@ -698,10 +749,11 @@
 
   \note[item]{maybe some hand drawing of our ideas?}
   \note[item]{Another challenge was the buttons}
-  \note[item]{First we though of using small springs, but to complexe in the end.}
+  \note[item]{First we though of using small springs to push the button back, but to complexe in the end.}
+  \note[item]{With a switch that needs a big force to press, the button is going back in place.}
   \note[item]{Then using rivets, tricky to manufacture.}
   \note[item]{Final choice, 3d printed buttons.}
-  \note[item]{With a switch that needs a big force to press, the button is going back in place.}
+
 
 \end{frame}
 
@@ -722,7 +774,7 @@
   \item Buy electronics components
   \item Download circuit gerber files and order PCB
   \item Download case model and order 3D print
-  \item Buy/build a programmer (booloader)
+  \item Buy/build a programmer (bootloader)
   \item Soldering paste
   \item Hot-air station or oven
   \item Soldering iron (finish/re-work)
@@ -734,6 +786,8 @@
   \end{center}
 
   \note[item]{I want to build this watch, what should I do?}
+  \note[item]{Components available from main suppliers}
+  \note[item]{Talk about BGA soldering on the next slide!}
 
 \end{frame}
 
@@ -743,11 +797,11 @@
   PCB assembly
 
   \begin{itemize}
-  \item Stencils (can be ordered with PCB)
-  \item Leaded soldering paste (easier to handle than lead-free)
+  \item Stencils (ordered with PCB)
+  \item Soldering paste
   \item Components placed by hand
   \item Script to generate placement pdf
-  \item Soldered with hot-air station (quite tricky!)
+  \item Soldered with hot-air station
   \end{itemize}
 
   \begin{center}
@@ -757,7 +811,9 @@
   \end{center}
 
   \note[item]{How we assembled the PCB}
-  \note{Stencil needed to solder BGA/QFN components (pins are underneath and not accesible with a soldering iron)}
+  \note[item]{Stencil needed to solder BGA/QFN components (pins are underneath and not accesible with a soldering iron)}
+  \note[item]{Script to generate placement pdf very useful, don't need to go from schematics to layout all the time}
+  \note[item]{We don't have an oven for soldering, so we used a hot-air station, which is quite tricky}
 
 \end{frame}
 
@@ -769,9 +825,9 @@
   \begin{itemize}
   \item Download sources from the GIT repo
   \item Find your way through the sources (not nicely bundled, yet)
-  \item Compile booloader and flash it (using a programmer)
+  \item Compile bootloader and flash it (using a programmer)
   \item Compile application sw and flash it (using the bootloader)
-  \item Modify, re-flash, etc...
+  \item Modify, re-flash, test, etc...
   \end{itemize}
 
   \vskip 8mm
@@ -803,7 +859,10 @@
     \end{table}
   \end{center}
 
+  \note[item]{The price in euro are converted from swiss franc with the exchange rate of last week}
+  \note[item]{So it might not be up to date ;)}
   \note[item]{Review table style to fit Federico's}
+  \note[item]{Next is Federico slide on software}
 
 \end{frame}
 
