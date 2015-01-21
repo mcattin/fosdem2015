@@ -151,7 +151,11 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{What is it?}
   \begin{center}
-    \includegraphics[height=7.5cm]{fwatch-full-side-red.eps}
+      \alt<2> {
+        \includegraphics[height=7.5cm]{fwatch-full-side-red.eps}
+      }{
+        \includegraphics[height=7.5cm]{fwatch-full-side-black-qmark.eps}
+      }
   \end{center}
   \note[item]{This is a GPS watch}
   \note[item]{A lot of sensors}
@@ -227,14 +231,14 @@
   \item Small size (footprint)
   \end{itemize}
 
-  \note[item]{Fill up slide}
+  \note[item]{Fill up slide??}
   \note[item]{Talk about feasability study??}
-
+  \note[item]{}
   \note[item]{After this introduction, I'll talk more about design process}
   \note[item]{We started with the component selection}
   \note[item]{All components must be low power, to have the longest possible battery life}
   \note[item]{They should be available from main suppliers in small quantity}
-  \note[item]{\rightarrow to allow others to build the watch}
+  \note[item]{$\rightarrow$ to allow others to build the watch}
   \note[item]{Also the components must be as small as possible to fit in a watch}
 
 \end{frame}
@@ -355,8 +359,8 @@
     \end{column}
     \hfill%
     \begin{column}{.48\textwidth}
-      %\includegraphics[height=4.5cm]{LCD.eps}
-      \includegraphics[height=4.5cm]{sw_hello_world.eps}
+      \includegraphics[height=4.5cm]{LCD.eps}
+      %\includegraphics[height=4.5cm]{sw_hello_world.eps}
     \end{column}%
   \end{columns}
 
@@ -418,6 +422,7 @@
   \begin{itemize}
   \item Bluetooth LE
   \item Low noise amplifier for the GPS antenna
+  \item Power management
   \end{itemize}
 
   \begin{center}
@@ -1114,7 +1119,7 @@
 
 %------------ FRAME --------------------------------------------------
 
-\begin{frame}{Free Development Need Free Tools}
+\begin{frame}{Free Development Needs Free Tools}
   \begin{center}
     \alt<2> {
       \includegraphics[height=7.5cm]{fwatch-full-side-tool.eps}
@@ -1136,16 +1141,16 @@
 
 %------------ FRAME --------------------------------------------------
 
-\begin{frame}{Easy to Made}
+\begin{frame}{Easy to Make}
   \Large
   \begin{center}
-    How difficult can be? \\
+    How difficult can it be? \\
     \vskip 1cm
     Competitive free tools \\
     \vskip 1cm
     Specialized company in 3D printing \\
     \vskip 1cm
-    Specialized company in PCB printing \\
+    Specialized company in PCB manufacturing \\
     \vskip 1cm
     Easy to ship everywhere
  \end{center}
