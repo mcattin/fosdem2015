@@ -169,20 +169,25 @@
 
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Why a watch?}
+  \Large
+  \begin{center}
+    Retirement gift for a timing Hacker \\
+  \end{center}
+  \vskip 1cm
 
-  Retirement gift for a timing Hacker \\
-
-  \textit{image: Julian face here?}
-  
+  \textbf{Gift Requirement}
+  \vskip 1cm
   \begin{enumerate}
-    \item customization of the gift
-    \item hackable gift
-    \item free/open source
+  \item customization of the gift
+    \vskip 7mm
+  \item hackable gift
+    \vskip 7mm
+  \item free/open source
   \end{enumerate}
 
   \note[item]{Retirement timing hacker}
   \note[item]{currently, not free smart device}
-  \note[item]{challange do it --- with free tools}
+  \note[item]{challenge do it --- with free tools}
 
 \end{frame}
 
@@ -271,7 +276,7 @@
 
   \note[item]{The micro controller we chose is a 32-bit cortex-M3 from Silicon Labs}
   \note[item]{It has a lot of memory}
-  \note[item]{And an extremly low power consumption}
+  \note[item]{And an extremely low power consumption}
   \note[item]{In deep sleep mode it only consumes a few micro amperes}
   \note[item]{In deep sleep, the RTC is running and RAM is kept}
 
@@ -330,10 +335,10 @@
   \end{columns}
 
   \note[item]{Another important component is the pressure sensor}
-  \note[item]{Because we wanted this watch to be a hiking and montaineering watch}
+  \note[item]{Because we wanted this watch to be a hiking and mountaineering watch}
   \note[item]{So we needed a good pressure sensor to calculate the altitude precisely}
-  \note[item]{Because the GPS is quite inacurate for the altitude}
-  \note[item]{And also the pressure sensor can gbe used to give a basic weather forecast}
+  \note[item]{Because the GPS is quite inaccurate for the altitude}
+  \note[item]{And also the pressure sensor can be used to give a basic weather forecast}
   \note[item]{We chose a very good pressure sensor}
   \note[item]{It is water-resistant, it's important because it has to be exposed to the outdie of the case}
   \note[item]{And it includes a thermometer}
@@ -480,7 +485,7 @@
   \item 4 x 4 cm
   \item 4 layers
   \item Components on both sides
-  \item Manufactered by Eurocircuits
+  \item Manufactured by Eurocircuits
   \end{itemize}
 
   \begin{center}
@@ -527,7 +532,7 @@
   \note[item]{The voltage regulator setting pins was badly connected}
   \note[item]{This was due to a error in the datasheet it was easily fixed by cutting a trace and soldering a little wire}
   \note[item]{Also, we didn't carefully check how the interrupt work with this MCU and in order to use interrupt from the battery gauge and accelerometer, we had to solder a few exra wires}
-  \note[item]{Because without interrupt we had to poll to check if the charger was plugged and it was draining the battery quicky.}
+  \note[item]{Because without interrupt we had to poll to check if the charger was plugged and it was draining the battery quickly.}
 
 \end{frame}
 
@@ -557,7 +562,7 @@
   \textbf{FAIL!}
 
   \note[item]{We first though of putting a few LED on the top of the PCB}
-  \note[item]{And a opaque piece of plexiglass (~1mm) to difuse the light}
+  \note[item]{And a opaque piece of plexiglass (~1mm) to diffuse the light}
   \note[item]{But as you can see on the picture, the light distribution is not uniform}
 
 \end{frame}
@@ -619,7 +624,7 @@
 
   \begin{itemize}
   \item Docmentation, support
-  \item User-friendliness, leanring curve
+  \item User-friendliness, learning curve
   \end{itemize}
 
   \pause
@@ -816,7 +821,7 @@
   \end{center}
 
   \note[item]{How we assembled the PCB}
-  \note[item]{Stencil needed to solder BGA/QFN components (pins are underneath and not accesible with a soldering iron)}
+  \note[item]{Stencil needed to solder BGA/QFN components (pins are underneath and not accessible with a soldering iron)}
   \note[item]{Script to generate placement pdf very useful, don't need to go from schematics to layout all the time}
   \note[item]{We don't have an oven for soldering, so we used a hot-air station, which is quite tricky}
 
@@ -992,13 +997,14 @@
    License & Mod. GPL & restrictive & BSD & BSD \\[5mm]
    EFM32   & yes      & yes         & yes & no  \\[5mm]
    USB     & no       & yes         & no  & yes \\[5mm]
-   FAT     & yes      & yes         & no  & yes \\
+   FAT     & no       & yes         & no  & yes \\
   \end{tabular}
  \end{center}
 
+ \note[item]{raw ordered by importance}
  \note[item]{License main thing}
  \note[item]{uC nice but closed}
- \note[item]{FreeRTOS --- Keil RTX}
+ \note[item]{FreeRTOS --- Keil RTX, they don't have FAT and USB}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
@@ -1031,8 +1037,40 @@
     \end{column}%
   \end{columns}
 
-  \note{The main criterium here was the level of knowledge sharing
+  \note[item]{The main criterium here was the level of knowledge sharing
     around the projects}
+  \note[item]{The choice is done, but I'm personally curious so if you know
+    where it is the community around RTX (forum, irc channel, blog)
+    let me know. }
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+\begin{frame}{Graphic}
+  \Large
+  \begin{center}
+    tiny 2D graphic library \\
+    \vskip 7mm
+    adapt the library to out screen \\
+  \end{center}
+
+  \vskip 7mm
+  \textbf{Features}
+  \vskip 4mm
+
+  \begin{itemize}
+  \item write text
+    \vskip 4mm
+  \item draw simple geometry and icons
+    \vskip 4mm
+  \item event management
+  \end{itemize}
+
+  \note[item]{Internally, one of us already wrote a tiny graphic library}
+  \note[item]{we adapted the library to our screen}
+  \note[item]{The library allows to write text of different size}
+  \note[item]{it allows to draw simple geometries like: line, triangles,
+    rectangles, circles, and icons}
+  \note[item]{Graphic element can act on event}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
@@ -1043,21 +1081,29 @@
   \end{center}
 
   \note{DO NOT SAY TOO MUCH, THERE WILL BE THE VIDEO LATER}
+  \note[item]{drivers behind}
   \note[item]{task: say basically what they do}
+  \note[item]{GPS - time, tracking if enable}
   \note[item]{apps: say basically what they do}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
+\begin{frame}{Interface}
+  \begin{center}
+    \includegraphics[height=7.5cm]{fwatch-full-side-btn.eps}
+  \end{center}
+\end{frame}
 
-\begin{frame}
+\begin{frame}{Demo}
   \begin{center}
     \begin{figure}[h!]
       \centering
-%  \movie[height=5cm, width = 5cm, autostart, once, showcontrols=true,
-%borderwidth=1pt, poster]{Applications Demonstration}{bird.avi}
+      \movie[height=5cm, width = 5cm, autostart, once, showcontrols=true,
+        borderwidth=1pt, poster]{Applications Demonstration}{bird.avi}
     \end{figure}
   \end{center}
-  \note{just comment the video}
+  \note{just comment the video. The menu easy to configue thanks to a config
+    structure}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
@@ -1144,7 +1190,7 @@
 \begin{frame}{Easy to Make}
   \Large
   \begin{center}
-    How difficult can it be? \\
+    How difficult can be? \\
     \vskip 1cm
     Competitive free tools \\
     \vskip 1cm
@@ -1171,17 +1217,48 @@
     3D Metal printers \\
   \end{center}
 
-  \note{Just talk a bit about it}
+  \note[item]{Open source movement is growing as usual}
+  \note[item]{Open source is every where, different areas}
+  \note[item]{People are starting to use free tools}
+  \note[item]{3D metal printer are going to accelerate this expansion}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
 
-\begin{frame}{Please Join}
+\begin{frame}{What can it be?}
+  \vskip -5mm
+  \begin{columns}[T] % align columns
+    \begin{column}{.48\textwidth}
+      \begin{center}
+        \includegraphics[height=3.5cm]{fwatch-para.eps} \\
+        \vskip 5mm
+        \includegraphics[height=3.5cm]{fwatch-tenn.eps}
+      \end{center}
+    \end{column}
+    \hfill%
+    \begin{column}{.48\textwidth}
+      \begin{center}
+        \includegraphics[height=3.5cm]{fwatch-bike.eps} \\
+        \vskip 5mm
+        \includegraphics[height=3.5cm]{fwatch-trek.eps}
+      \end{center}
+    \end{column}%
+  \end{columns}
+
+  \note[item]{paraglaiding - accelerometer, compass, pressure, GPS position}
+  \note[item]{tennis - acceleromenter, compass - track arm movements}
+  \note[item]{bike - GPS position, speed calculation, accelerometer}
+  \note[item]{trekking - GPS position, altitude}
+\end{frame}
+
+%------------ FRAME --------------------------------------------------
+
+\begin{frame}{Join Us}
   \Large
   \begin{center}
     \includegraphics[height=3.5cm]{fwatch-full-side.eps} \\
     \vskip 5mm
-    Far away from a real product \\
+    Not a real product \\
     \vskip 5mm
     Make it a good example \\
     \vskip 5mm
