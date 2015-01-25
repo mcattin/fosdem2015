@@ -8,7 +8,7 @@ fwatch_fosdem2015.pdf : fwatch_fosdem2015.tex
 
 #	latex $^
 # 	bibtex
-#	latex $^
+	latex $^
 	latex $^
 	dvips -j0 fwatch_fosdem2015
 	ps2pdf  -dPDFX -dEmbedAllFonts=true -dSubsetFonts=true -dEPSCrop=true fwatch_fosdem2015.ps
