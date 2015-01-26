@@ -112,7 +112,7 @@
 \begin{frame}
   \titlepage
   \note[item]{Federico: software engineer}
-  \note[item]{Metthieu: electronic engineer}
+  \note[item]{Matthieu: electronic engineer}
   \note[item]{CERN BE-CO}.
   \note[item]{free time project}
 \end{frame}
@@ -204,7 +204,7 @@
   \note[item]{after-work --- only free time}
   \note[item]{3 groups : mechanic, electronic, software}
   \note[item]{weekly meeting}
-  \note[item]{introduce matthieu}
+  \note[item]{introduce Matthieu}
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
@@ -239,7 +239,7 @@
   \end{itemize}
 
   \note[item]{Fill up slide??}
-  \note[item]{Talk about feasability study??}
+  \note[item]{Talk about feasibility study??}
   \note[item]{}
   \note[item]{After this introduction, I'll talk more about design process}
   \note[item]{We started with the component selection}
@@ -274,7 +274,7 @@
     \end{column}%
   \end{columns}
 
-  \note[item]{More detail about the MUC selection??}
+  \note[item]{More detail about the MCU selection??}
 
   \note[item]{The micro controller we chose is a 32-bit cortex-M3 from Silicon Labs}
   \note[item]{It has a lot of memory}
@@ -342,7 +342,7 @@
   \note[item]{Because the GPS is quite inaccurate for the altitude}
   \note[item]{And also the pressure sensor can be used to give a basic weather forecast}
   \note[item]{We chose a very good pressure sensor}
-  \note[item]{It is water-resistant, it's important because it has to be exposed to the outdie of the case}
+  \note[item]{It is water-resistant, it's important because it has to be exposed to the outside of the case}
   \note[item]{And it includes a thermometer}
   \note[item]{Of course, the temperature is not very accurate when you have the watch on you wrist}
 
@@ -417,7 +417,7 @@
   \begin{itemize}
   \item 3-axis accelerometer + compass
   \item Ambient light sensor
-  \item microSD card slot
+  \item micro-SD card slot
   \item Battery charger + fuel gauge
   \item micro-USB connector
   \item Buzzer
@@ -456,6 +456,7 @@
   \item CERN is contributing
   \item Developer in the team (help, bugfix, feedback)
   \item New features making routing easier (e.g push\&shove)
+  \item Script to generate placement pdf
   \end{itemize}
 
   \vskip 6mm
@@ -488,7 +489,7 @@
   \item 4 layers
   \item Components on both sides
   %\item Manufactured by Eurocircuits
-  \item Licended under CERN OHL v1.2
+  \item Licensed under CERN OHL v1.2
   \end{itemize}
 
   \begin{center}
@@ -508,21 +509,23 @@
 \end{frame}
 
 %------------ FRAME --------------------------------------------------
-\begin{frame}{PCB validation}
+\begin{frame}{PCB assembly \& validation}
 
-  First prototype fully working, except two minor bugs
+  Prototypes assembled by hand
+
+  Fully working, except two minor bugs
 
   \begin{itemize}
   \item Error in a datasheet
-    \begin{itemize}
-    \item Voltage regulator output wrongly set
-    \end{itemize}
+    %\begin{itemize}
+    %\item Voltage regulator output wrongly set
+    %\end{itemize}
   \item MCU interrupt scheme
-    \begin{itemize}
-    \item Not all MCU pins as IRQ source
-    \item Polling drains the battery quickly
-    \end{itemize}
-    \item Fixed with few cuts and wires!
+    %\begin{itemize}
+    %\item Not all MCU pins as IRQ source
+    %\item Polling drains the battery quickly
+    %\end{itemize}
+  \item Fixed with few cuts and wires!
   \end{itemize}
 
   \begin{center}
@@ -554,7 +557,7 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Backlight}
 
-  First try: LEDs + opaque plexiglass
+  First try: LEDs + opaque Plexiglas
 
   \begin{center}
     \includegraphics[height=4.5cm]{bl_led_off.eps}~
@@ -565,7 +568,7 @@
   \textbf{Not good!}
 
   \note[item]{We first though of putting a few LED on the top of the PCB}
-  \note[item]{And a opaque piece of plexiglass (~1mm) to diffuse the light}
+  \note[item]{And a opaque piece of Plexiglas's (~1mm) to diffuse the light}
   \note[item]{But as you can see on the picture, the light distribution is not uniform}
 
 \end{frame}
@@ -585,7 +588,7 @@
 
   \note[item]{Then we took the backlight of a broken smartphone screen and cut it to the right dimensions}
   \note[item]{As you can see, it work nicely, but...}
-  \note[item]{It is not very suitable for production in serie or to sell in a kit}
+  \note[item]{It is not very suitable for production in series or to sell in a kit}
 
 \end{frame}
 
@@ -603,7 +606,7 @@
   \textbf{The solution}
 
   \note[item]{We finally contacted many companies}
-  \note[item]{And we found one with no Minium Order Quantity of several thousands}
+  \note[item]{And we found one with no Minimum Order Quantity of several thousands}
   \note[item]{You see here the first samples}
   \note[item]{There are surprisingly cheap, even for small quantity and have a good luminosity}
   \note[item]{(negative point, a bit thick compared to high-tech smartphones)}
@@ -626,7 +629,7 @@
   Criteria
 
   \begin{itemize}
-  \item Docmentation, support
+  \item Documentation, support
   \item User-friendliness, learning curve
   \end{itemize}
 
@@ -703,7 +706,7 @@
 \begin{frame}{First 3D print}
 
   \begin{itemize}
-  \item Platic material (additive methode)
+  \item Plastic material (additive method)
   \end{itemize}
 
   \begin{center}
@@ -720,7 +723,7 @@
 \begin{frame}{Second 3D print}
 
   \begin{itemize}
-  \item Platic material
+  \item Plastic material
   \end{itemize}
 
   \begin{center}
@@ -744,7 +747,7 @@
   \end{center}
 
   \note{Supposed to be water-tight, not tested though}
-  \note{Smoother finnish than raw plasic}
+  \note{Smoother finish than raw plastic}
 
 \end{frame}
 
@@ -757,9 +760,8 @@
   \end{itemize}
 
   \begin{center}
-    \includegraphics[height=4.5cm]{case_new_screws.eps}~
-    Picture here
-    %\includegraphics[height=4.1cm]{case_new_screws.eps}
+    \includegraphics[height=4.5cm]{case_new_screws-2.eps}~
+    \includegraphics[height=4.5cm]{case_new_screws-3.eps}
   \end{center}
 
   \note{Talk about improvements to be done?? Water-resistance}
@@ -779,7 +781,7 @@
 
   \note[item]{maybe some hand drawing of our ideas?}
   \note[item]{Another challenge was the buttons}
-  \note[item]{First we though of using small springs to push the button back, but to complexe in the end.}
+  \note[item]{First we though of using small springs to push the button back, but to complex in the end.}
   \note[item]{With a switch that needs a big force to press, the button is going back in place.}
   \note[item]{Then using rivets, tricky to manufacture.}
   \note[item]{Final choice, 3d printed buttons.}
@@ -798,17 +800,18 @@
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
-  Components procurement \& tools
+  %Components procurement \& tools
 
   \begin{itemize}
-  \item Buy electronics components
-  \item Download circuit gerber files and order PCB
-  \item Download case model and order 3D print
+  \item Buy electronics/mechanical components
+  \item Download circuit Gerber files and order PCB
+  \item Assemble the board
+  \item Download case/button models and order 3D print
   \item Buy/build a programmer (bootloader)
-  \item Soldering paste
-  \item Hot-air station or oven
-  \item Soldering iron (finish/re-work)
-  \item Optional: Milling maching (plexiglass)
+  %\item Soldering paste
+  %\item Hot-air station or oven
+  %\item Soldering iron (finish/re-work)
+  \item Optional: Milling machine (Plexiglas)
   \end{itemize}
 
   \begin{center}
@@ -817,10 +820,12 @@
 
   \note[item]{I want to build this watch, what should I do?}
   \note[item]{Components available from main suppliers}
-  \note[item]{Talk about BGA soldering on the next slide!}
+  %\note[item]{Talk about BGA soldering on the next slide!}
 
 \end{frame}
 
+
+\begin{comment}
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
@@ -847,6 +852,9 @@
 
 \end{frame}
 
+\end{comment}
+
+
 %------------ FRAME --------------------------------------------------
 \begin{frame}{Building the watch}
 
@@ -854,7 +862,8 @@
 
   \begin{itemize}
   \item Download sources from the GIT repo
-  \item Find your way through the sources (not nicely bundled, yet)
+  %\item Find your way through the sources (not nicely bundled, yet)
+  \item No binary releases (yet)
   \item Compile bootloader and flash it (using a programmer)
   \item Compile application sw and flash it (using the bootloader)
   \item Modify, re-flash, test, etc...
@@ -879,11 +888,11 @@
         \cline{2-4}
         & \multicolumn{3}{c|}{Number of watches}                                     &  \\ \cline{2-4}
         & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{50} &  \\ \cline{1-4}
-        \multicolumn{1}{|l|}{Pcb + components}         & 196 \texteuro               & 102 \texteuro                 & 87 \texteuro                  &  \\ \cline{1-4}
-        \multicolumn{1}{|l|}{Pcb assembly}             & -                           & 123 \texteuro                 & 70 \texteuro                  &  \\ \cline{1-4}
-        \multicolumn{1}{|l|}{Case + buttons + screws}  & 79 \texteuro                & 65 \texteuro                  & 71 \texteuro                  &  \\ \cline{1-4}
-        \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{275 \texteuro}      & \textbf{302 \texteuro}        & \textbf{227 \texteuro}        &  \\ \cline{1-4}
-        \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{275 \texteuro}      & \textbf{3'021 \texteuro}      & \textbf{11'370 \texteuro}      &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Pcb + components}         & 175 \texteuro               & 94 \texteuro                  & 81 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Pcb assembly}             & -                           & 118 \texteuro                 & 67 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{Case + buttons + screws}  & 68 \texteuro                & 67 \texteuro                  & 61 \texteuro                  &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{\textbf{TOTAL per watch}} & \textbf{243 \texteuro}      & \textbf{278 \texteuro}        & \textbf{209 \texteuro}        &  \\ \cline{1-4}
+        \multicolumn{1}{|l|}{\textbf{TOTAL}}           & \textbf{243 \texteuro}      & \textbf{2'784 \texteuro}      & \textbf{10'455 \texteuro}     &  \\ \cline{1-4}
       \end{tabular}
       \caption{Estimated cost for small series (without shipping)}
     \end{table}
